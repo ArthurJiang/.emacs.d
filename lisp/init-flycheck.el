@@ -1,11 +1,13 @@
+;;; init-flycheck.el --- Flycheck mode configuration
+
+;;; Commentary:
+;;
+;; Flycheck configuration
+;;
+
 (require 'package)
 
 ;;; Code:
-(add-to-list 'package-archives
-	     '("MELPA Stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
-(package-refresh-contents)
-
 (package-install 'flycheck)
 
 (global-flycheck-mode)

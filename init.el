@@ -1,19 +1,17 @@
-;;; init --- This is the root configuration, more user specific configuration, see ./lisp
+;;; init.el --- This is the root configuration, more user specific configuration, see ./lisp
+
 ;;; Commentary:
-
-;; -*- lexical-binding: t -*-
-
+;;
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+;;
 
 ;;; Code:
 (package-initialize)
-
+;; -*- lexical-binding: t -*-
 (setq debug-on-error t)
-
-
 
 ;; Version check
 (let ((min-ver "25"))
@@ -34,12 +32,14 @@
 	  (lambda () (setq gc-cons-threshold *normal-gc-cons-threshold*)))
 
 ;; Load user specific configuration
+(require 'init-elpa)
 (require 'init-themes)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
 
-;;(require 'init-flycheck)
+(require 'init-flycheck)
+(require 'init-company)
 
 ;; Allow access from Emacs client
 (require 'server)
