@@ -5,10 +5,9 @@
 ;; Flycheck configuration
 ;;
 
-(require 'package)
-
 ;;; Code:
-(package-install 'flycheck)
+(require 'package)
+(require-package 'flycheck)
 
 (global-flycheck-mode)
 
