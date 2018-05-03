@@ -40,8 +40,9 @@
 
 (require 'init-flycheck)
 (require 'init-company)
-(require 'init-python)
+; (require 'init-python)
 (require 'init-markdown)
+(require 'init-org)
 
 ;; Allow access from Emacs client
 (require 'server)
