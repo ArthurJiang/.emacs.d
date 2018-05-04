@@ -18,10 +18,19 @@
   (if (version< emacs-version min-ver)
       (error "Your Emacs v%s is too old, requires v%s or higher!" emacs-version min-ver) (message "Your Emacs v%s is ok!" emacs-version)))
 
+;; Graphic check
+(if (display-graphic-p)
+    (progn
+      (message "---Run Emacs in graphic mode!---")
+      (defconst *is-gui* t))
+  (message "---Run Emacs in terminal mode!---")
+  (defconst *is-gui* nil))
+
 ;; Global configuration
 (defconst *spell-check-support-enabled* t) ;; Enable with t if you prefer
 (defconst *normal-gc-cons-threshold* (* 128 1024 1024))
 (defconst *init-gc-cons-threshold* (* 256 1024 1024))
+(defconst *is-a-mac* (eq system-type 'darwin))
 
 ;; Load user specific configuration
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -48,6 +57,11 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+;; Disable emacs GUI menu/tool bar
+(when *is-gui*
+  (menu-bar-mode -1)
+  (tool-bar-mode -1))
 
 (provide 'init)
 ;;; init.el ends here
