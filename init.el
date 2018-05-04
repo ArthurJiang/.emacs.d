@@ -6,7 +6,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-;;
+;; 
 
 ;;; Code:
 (package-initialize)
@@ -43,6 +43,8 @@
 ;; Load user specific configuration
 (require 'init-elpa)
 (require 'init-themes)
+
+(require 'init-editing)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))

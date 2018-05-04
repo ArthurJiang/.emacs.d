@@ -14,7 +14,7 @@
 (add-hook 'org-mode-hook
 	  (lambda () (local-set-key (kbd "C-l C-p") 'org-preview-latex-fragment)))
 
-;; Making emacs find latex (so that C-c C-x C-l works on orgmode)
+;; Making emacs find latex in os X, GUI Emacx (so that C-l C-p(default is C-c C-x C-l) works on orgmode)
 (when (and *is-a-mac* *is-gui*)
   (setenv "PATH" (concat ":/Library/TeX/texbin/" (getenv "PATH")))
   (add-to-list 'exec-path "/Library/TeX/texbin/"))
