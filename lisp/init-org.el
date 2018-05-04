@@ -11,11 +11,14 @@
 (require-package 'org-pomodoro)
 
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
+(add-hook 'org-mode-hook
+	  (lambda () (local-set-key (kbd "C-l C-p") 'org-preview-latex-fragment)))
 
 ;; Making emacs find latex (so that C-c C-x C-l works on orgmode)
 (when (and *is-a-mac* *is-gui*)
   (setenv "PATH" (concat ":/Library/TeX/texbin/" (getenv "PATH")))
   (add-to-list 'exec-path "/Library/TeX/texbin/"))
+
 
 (provide 'init-org)
 ;;; init-org.el ends here

@@ -61,7 +61,13 @@
 ;; Disable emacs GUI menu/tool bar
 (when *is-gui*
   (menu-bar-mode -1)
-  (tool-bar-mode -1))
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  (set-fringe-mode 0)
+  (setq inhibit-splash-screen t)
+  (setq inhibit-startup-message t)
+  (toggle-frame-fullscreen)
+  (toggle-frame-maximized))
 
 (provide 'init)
 ;;; init.el ends here
