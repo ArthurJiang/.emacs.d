@@ -54,6 +54,7 @@
 (require 'init-company)
 ; (require 'init-python)
 (require 'init-markdown)
+(require 'init-latex)
 (require 'init-org)
 
 ;; Allow access from Emacs client

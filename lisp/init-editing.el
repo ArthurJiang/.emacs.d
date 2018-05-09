@@ -9,7 +9,8 @@
 (electric-pair-mode t)
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C--") 'advertised-undo)
-
+(global-hl-line-mode t)
+(global-set-key "\C-cs" 'eshell)
 ;; Column limitation
 (require 'whitespace)
 (setq whitespace-line-column 100)
