@@ -82,7 +82,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (manoj-dark)))
- '(package-selected-packages (quote (session smex flycheck))))
+ '(package-selected-packages (quote (word-count word-count-mode session smex flycheck)))
+ '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

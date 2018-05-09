@@ -37,5 +37,8 @@
 (require-package 'session)
 (add-hook 'after-init-hook 'session-initialize)
 
+;; Word count
+(global-set-key (kbd "C-c w") 'count-words)
+
 (provide 'init-editing)
 ;;; init-editing.el ends here
