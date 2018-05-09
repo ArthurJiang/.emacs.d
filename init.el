@@ -44,7 +44,7 @@
 (require 'init-elpa)
 (require 'init-themes)
 (require 'init-font)
-
+(require 'init-git)
 (require 'init-editing)
 
 (when *spell-check-support-enabled*
@@ -66,7 +66,7 @@
   (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
-  (set-fringe-mode 0)
+  (fringe-mode '(8 . 0))
   (setq inhibit-splash-screen t)
   (setq inhibit-startup-message t)
   (toggle-frame-fullscreen)
