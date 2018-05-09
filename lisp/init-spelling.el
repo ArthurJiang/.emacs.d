@@ -16,6 +16,6 @@
 (require 'ispell)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-
+(global-set-key (kbd "C-$") 'ispell-word)
 (provide 'init-spelling)
 ;;; init-spelling.el ends here
