@@ -28,7 +28,8 @@
   (setenv "PATH" (concat ":/Library/TeX/texbin/" (getenv "PATH")))
   (add-to-list 'exec-path "/Library/TeX/texbin/"))
 
-(setq org-hide-emphasis-markers t)
+;; Remove it for conflict in latex fragment.
+;; (setq org-hide-emphasis-markers t)
 
 (provide 'init-org)
 ;;; init-org.el ends here
