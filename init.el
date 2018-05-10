@@ -82,6 +82,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (manoj-dark)))
+ '(linum-format (quote dynamic))
  '(package-selected-packages (quote (word-count word-count-mode session smex flycheck)))
  '(session-use-package t nil (session)))
 (custom-set-faces
@@ -89,4 +90,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(diff-hl-change ((t (:backgroung "#ef921e"))))
+ '(diff-hl-delete ((t (:background "#f59cb1"))))
+ '(diff-hl-insert ((t (:background "#82d2d7"))))
+ '(hl-line ((t (:background "purple2" :foreground "seashell1")))))
