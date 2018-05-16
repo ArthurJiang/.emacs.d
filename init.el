@@ -46,16 +46,21 @@
 (require 'init-font)
 (require 'init-git)
 (require 'init-editing)
+(require 'init-env)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
 
 (require 'init-flycheck)
 (require 'init-company)
-; (require 'init-python)
+
 (require 'init-markdown)
 (require 'init-latex)
 (require 'init-org)
+
+;; Programming
+;; (require 'init-python)
+(require 'init-lua)
 
 ;; Allow access from Emacs client
 (require 'server)
