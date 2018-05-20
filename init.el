@@ -14,7 +14,7 @@
 (setq debug-on-error t)
 
 ;; Version check
-(let ((min-ver "25"))
+(let ((min-ver "26"))
   (if (version< emacs-version min-ver)
       (error "Your Emacs v%s is too old, requires v%s or higher!" emacs-version min-ver) (message "Your Emacs v%s is ok!" emacs-version)))
 
@@ -69,13 +69,12 @@
 
 ;; Disable emacs GUI menu/tool bar
 (when *is-gui*
-  (menu-bar-mode -1)
   (tool-bar-mode -1)
+  (menu-bar-mode -1)
   (scroll-bar-mode -1)
   (fringe-mode '(8 . 0))
   (setq inhibit-splash-screen t)
   (setq inhibit-startup-message t)
-  (toggle-frame-fullscreen)
   (toggle-frame-maximized))
 
 (provide 'init)
@@ -98,4 +97,4 @@
  '(diff-hl-change ((t (:backgroung "#ef921e"))))
  '(diff-hl-delete ((t (:background "#f59cb1"))))
  '(diff-hl-insert ((t (:background "#82d2d7"))))
- '(hl-line ((t (:background "purple2" :foreground "seashell1")))))
+ '(hl-line ((t (:background "gray30")))))

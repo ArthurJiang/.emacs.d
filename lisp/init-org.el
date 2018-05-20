@@ -45,5 +45,59 @@
 ;; Remove it for conflict in latex fragment.
 ;; (setq org-hide-emphasis-markers t)
 
+;; Enable code block execute: http://wenshanren.org/?p=334
+(defun org-insert-src-block (src-code-type)
+  "Insert `SRC-CODE-TYPE' souce code block in org-mode"
+  (interactive
+   (let ((src-code-types
+	  `("awk" "C" "clojure" "emacs-lisp" "js" "latex" "lisp" "lua" "matlab" "ocaml" "org" "python" "R" "shell")))
+     (list (ido-completing-read "Source code type: " src-code-types))))
+  (progn
+    (newline-and-indent)
+    ;; https://orgmode.org/manual/Results-of-evaluation.html
+    (insert (format "#+BEGIN_SRC %s :results output\n" src-code-type))
+    (newline-and-indent)
+    (insert "#+END_SRC\n")
+    (previous-line 2)
+    (org-edit-src-code)))
+
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    ;; turn on flyspell-mode by default
+	    (flyspell-mode 1)
+	    ;; C-TAB for expanding
+	    (local-set-key (kbd "C-<tab>") 'yas/expand-from-trigger-key)
+	    ;; kbd for editing source code blocks
+	    (local-set-key (kbd "C-c c e") 'org-edit-src-code)
+	    ;; kbd for inserting source code blocks
+	    (local-set-key (kbd "C-c c i") 'org-insert-src-block)
+	    ;; kbd for running source code blocks
+	    (local-set-key (kbd "C-c c r") 'org-babel-execute-src-block)
+	    ))
+
+;; syntax highlight
+(setq org-src-fontify-natively t)
+
+;; Language list: https://orgmode.org/manual/Languages.html#Languages
+;; Need install/build new version emacs 26+, GNU: https://emacsformacosx.com/builds or Terminal: brew install emacs --devel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((awk . t)
+   (C . t)
+   (clojure . t)
+   (emacs-lisp . t)
+   (js . t)
+   (latex . t)
+   (lisp . t)
+   ;; ob-lua: https://github.com/emacsmirror/org/blob/master/lisp/ob-lua.el
+   ;; Open issues: https://github.com/syl20bnr/spacemacs/issues/7641
+   (lua . t)
+   (matlab . t)
+   (ocaml . t)
+   (org . t)
+   (python . t)
+   (R . t)
+   (shell . t)))
+
 (provide 'init-org)
 ;;; init-org.el ends here

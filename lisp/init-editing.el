@@ -10,13 +10,13 @@
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C--") 'advertised-undo)
 (global-hl-line-mode t)
-(global-set-key "\C-cs" 'eshell)
+(global-set-key "\C-ce" 'eshell)
 (global-set-key "\C-co" 'occur)
 (global-set-key "\C-cw" 'compare-windows)
 (global-set-key "\C-cb" 'text-scale-increase)
 (global-set-key "\C-cs" 'text-scale-decrease)
 (global-set-key "\C-ca" 'text-scale-adjust)
-
+(global-set-key "\C-\\" 'comment-or-uncomment-region)
 ;; Column limitation
 (require 'whitespace)
 (setq whitespace-line-column 100)
