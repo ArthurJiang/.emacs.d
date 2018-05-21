@@ -75,7 +75,7 @@
   (fringe-mode '(8 . 0))
   (setq inhibit-splash-screen t)
   (setq inhibit-startup-message t)
-  (toggle-frame-maximized))
+  (toggle-frame-fullscreen))
 
 (provide 'init)
 ;;; init.el ends here
