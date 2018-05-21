@@ -60,6 +60,7 @@
 
 ;; Programming
 ;; (require 'init-python)
+(require 'init-snippet)
 (require 'init-lua)
 
 ;; Allow access from Emacs client

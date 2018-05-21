@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ElseIf
+# key: elseif
+# --
+if $1 then
+$2
+elseif $3 then
+$4
+else
+$5
+end

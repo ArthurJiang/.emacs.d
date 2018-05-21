@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Repeat
+# key: repeat
+# --
+repeat
+$1
+until $2
