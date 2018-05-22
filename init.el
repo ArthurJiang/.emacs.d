@@ -14,7 +14,7 @@
 (setq debug-on-error t)
 
 ;; Version check
-(let ((min-ver "26"))
+(let ((min-ver "25"))
   (if (version< emacs-version min-ver)
       (error "Your Emacs v%s is too old, requires v%s or higher!" emacs-version min-ver) (message "Your Emacs v%s is ok!" emacs-version)))
 

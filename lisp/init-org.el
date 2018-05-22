@@ -80,24 +80,26 @@
 
 ;; Language list: https://orgmode.org/manual/Languages.html#Languages
 ;; Need install/build new version emacs 26+, GNU: https://emacsformacosx.com/builds or Terminal: brew install emacs --devel
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((awk . t)
-   (C . t)
-   (clojure . t)
-   (emacs-lisp . t)
-   (js . t)
-   (latex . t)
-   (lisp . t)
-   ;; ob-lua: https://github.com/emacsmirror/org/blob/master/lisp/ob-lua.el
-   ;; Open issues: https://github.com/syl20bnr/spacemacs/issues/7641
-   (lua . t)
-   (matlab . t)
-   (ocaml . t)
-   (org . t)
-   (python . t)
-   (R . t)
-   (shell . t)))
+(if (version< "26" emacs-version)
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '((awk . t)
+       (C . t)
+       (clojure . t)
+       (emacs-lisp . t)
+       (js . t)
+       (latex . t)
+       (lisp . t)
+       ;; ob-lua: https://github.com/emacsmirror/org/blob/master/lisp/ob-lua.el
+       ;; Open issues: https://github.com/syl20bnr/spacemacs/issues/7641
+       (lua . t)
+       (matlab . t)
+       (ocaml . t)
+       (org . t)
+       (python . t)
+       (R . t)
+       (shell . t))))
+
 
 (provide 'init-org)
 ;;; init-org.el ends here
