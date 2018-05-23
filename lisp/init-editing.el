@@ -15,7 +15,7 @@
 (global-set-key "\C-cw" 'compare-windows)
 (global-set-key "\C-cb" 'text-scale-increase)
 (global-set-key "\C-cs" 'text-scale-decrease)
-(global-set-key "\C-ca" 'text-scale-adjust)
+(global-set-key "\C-cza" 'text-scale-adjust)
 (global-set-key "\C-\\" 'comment-or-uncomment-region)
 ;; Column limitation
 (require 'whitespace)
