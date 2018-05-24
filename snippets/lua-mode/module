@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Module
+# key: module
+# --
+local _M = { _VERSION = $1 }
+local mt = { __index = _M }
+
+function _M.new(self)
+$2
+  return setmetatable({ $3 }, mt)
+end
+
+return _M
