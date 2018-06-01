@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Date
+# key: date
+# --
+`(format-time-string "%Y-%m-%dT%T")` $0
