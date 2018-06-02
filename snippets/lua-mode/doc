@@ -4,14 +4,22 @@
 # --
 -------------------------------------------------------
 --
--- @module $1
--- @summary $2
---
 -- @author Arthur Jiang
 -- @email sjian@microsoft.com
--- @copyright (C) 2018-googol Microsoft ARD Incubation Team
+-- @copyright (C) `(format-time-string "%Y")`-googol Microsoft ARD Incubation Team
 -- @version 0.1
--- @todo $3
--- @last-modified $4
+--
+-- @module $1
+-- @summary
+--   $2
+--
+-- @todo
+--   $3
+--
+-- @done
+--   $4
+--
+-- @create-time `(format-time-string "%Y-%m-%dT%T")`
+-- @last-modified `(format-time-string "%Y-%m-%dT%T")`
 --
 -------------------------------------------------------
