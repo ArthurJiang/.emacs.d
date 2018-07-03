@@ -61,7 +61,9 @@
 ;; Programming
 ;; (require 'init-python)
 (require 'init-snippet)
+(require 'init-lua-test)
 (require 'init-lua)
+
 
 ;; Allow access from Emacs client
 (require 'server)
@@ -88,7 +90,9 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (manoj-dark)))
  '(linum-format (quote dynamic))
- '(package-selected-packages (quote (word-count word-count-mode session smex flycheck)))
+ '(package-selected-packages
+   (quote
+    (js2-mode word-count word-count-mode session smex flycheck)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
