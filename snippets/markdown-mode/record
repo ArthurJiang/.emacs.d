@@ -1,0 +1,9 @@
+# -*- mode:snippet; require-final-newline: nil -*-
+# name: Record
+# key: record
+# --
+### `(format-time-string "%Y-%m-%d")`
+#### DONE
+- [x] $1
+#### TODO
+- [] $2
